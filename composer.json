@@ -1,0 +1,20 @@
+{
+    "name": "framework-w/skeleton",
+    "type": "project",
+    "description": "A minimal structure for Framework W project",
+    "version": "1.1.0",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.2.5",
+        "ext-mbstring": "*",
+        "framework-w/framework-w": "^2.1",
+        "respect/validation": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "app/"
+        }
+    }
+}
