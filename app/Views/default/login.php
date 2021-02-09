@@ -1,8 +1,11 @@
 <?php $this->layout('layout', ['title' => 'Login']); ?>
 
 <?php $this->start('main_content'); ?>
-<?php if($w_user): 
-     debug($w_user); ? echo ("veuillez vous connecter"); ?>
+<?php   if ($w_user): ?>
+<a href='/logout'>Logout</a>
+<?php else: ?>
+<p>Veuillez vous connecter</p>
+<?php endif; ?>
 
     <form  method="POST" class="form-example">
     <div class="form-example">

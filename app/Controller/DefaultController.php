@@ -45,13 +45,15 @@ class DefaultController extends Controller
 
 			$username = $safe['username'];
 
-			$user = (new AuthentificationModel)->isValidLoginInfo($username, $safe['password']);
+			$user_id = (new AuthentificationModel)->isValidLoginInfo($username, $safe['password']);
 
-			if( $user){
+			if( $user_id){
 
-				$user = (new UsersModel)->find($user);
 
-				(new AuthentificationModel)->LogUserIn($user);
+
+				$user_array = (new UsersModel)->find($user_id);
+
+				(new AuthentificationModel)->LogUserIn($user_array);
 
 			}
 		}
